@@ -13,10 +13,10 @@ lr=5e-5
 
 # Qwen2.5-Math-7B
 # raw 5w
-# experiment_name=numina-cot-dft-qwen-2.5-math-7b-raw-5w-lr-$lr-0916
-# save_path=checkpoints/$experiment_name
-# model_path=../LLMs/Qwen2.5-Math-7B
-# train_dataset=../data/Qwen2.5-Math-7B/step1/all_data.parquet
+experiment_name=numina-cot-dft-qwen-2.5-math-7b-raw-5w-lr-$lr-0916
+save_path=checkpoints/$experiment_name
+model_path=../LLMs/Qwen2.5-Math-7B
+train_dataset=../data/Qwen2.5-Math-7B/step1/all_data.parquet
 
 # our data
 # experiment_name=numina-cot-dft-qwen-2.5-math-7b-our-data-lr-$lr-0916
@@ -25,11 +25,11 @@ lr=5e-5
 # train_dataset=../data/Qwen2.5-Math-7B/model_train_datasets.parquet
 
 # ablation
-experiment_name=numina-cot-dft-qwen-2.5-math-7b-Guided-alignmen-ablation-lr-$lr-0918
-save_path=checkpoints/$experiment_name
-model_path=../LLMs/Qwen2.5-Math-7B
+# experiment_name=numina-cot-dft-qwen-2.5-math-7b-Guided-alignmen-ablation-lr-$lr-0918
+# save_path=checkpoints/$experiment_name
+# model_path=../LLMs/Qwen2.5-Math-7B
 
-train_dataset=../data/Qwen2.5-Math-7B/ablation/Guided-alignmen/ablation_data.parquet
+# train_dataset=../data/Qwen2.5-Math-7B/ablation/Guided-alignmen/ablation_data.parquet
 
 
 # Meta-Llama-3.1-8B
