@@ -1,11 +1,11 @@
 
 <div align="center">
 
-# *Mind the Gap:*: <br>Reducing Off-Policy Variance in Supervised Fine-Tuning via <br>Data Rewriting
+# *Mind the Gap*: Data Rewriting for Stable Off-Policy <br> Supervised Fine-Tuning
   
 
-<a href="https://arxiv.org/pdf/2509.151579" target="_blank">
-    <img alt="arXiv" src="https://img.shields.io/badge/arXiv-DFT-red?logo=arxiv" height="25" />
+<a href="https://arxiv.org/abs/2509.15157" target="_blank">
+    <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2509.15157-b31b1b.svg" height="25" />
 </a>
 
 <br>
