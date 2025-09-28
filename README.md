@@ -97,7 +97,7 @@ bash sh/eval.sh $PROMPT_TYPE $MODEL_NAME_OR_PATH $OUTPUT_DIR $N_SAMPLING $TEMPER
 | + DR + SFT (ours)         | 44.38     | 19.21     | 13.07     | 1.87      | 17.19     | 19.14     |
 | + DR + DFT (ours)         | **47.91** | **24.72** | **16.52** | **4.99**  | **26.09** | **24.05** |
 
-**Table**: Average accuracy (%) on mathematical reasoning benchmarks. SFT = Supervised Fine-tuning, DR = Data Rewriting, <br>
+**Table**: Average accuracy (%) on mathematical reasoning benchmarks. <br> SFT = Supervised Fine-tuning, DR = Data Rewriting, <br>
 DFT = Dynamic Fine-Tuning, from “On the Generalization of SFT: A Reinforcement Learning Perspective with Reward Rectification” [ (arXiv:2508.05629) ](https://arxiv.org/abs/2508.05629).
 
 ## Limitations
