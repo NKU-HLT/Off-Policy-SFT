@@ -79,6 +79,27 @@ OUTPUT_DIR=""          # e.g., outputs/eval_results
 bash sh/eval.sh $PROMPT_TYPE $MODEL_NAME_OR_PATH $OUTPUT_DIR $N_SAMPLING $TEMPERATURE
 ```
 
+## Main Results
+
+| Model / Method            | Math500   | Minerva   | Olympiad  | AIME24    | AMC23     | Avg.      |
+| ------------------------- | --------- | --------- | --------- | --------- | --------- | --------- |
+| **Qwen2.5-Math-7B**       |           |           |           |           |           |           |
+| Base                      | 39.90     | 14.43     | 17.16     | 7.50      | 29.38     | 21.67     |
+| + SFT                     | 52.61     | 19.13     | 17.32     | 2.06      | 25.00     | 23.23     |
+| + DFT                     | 68.70     | 31.92     | 32.31     | 6.68      | 43.44     | 36.61     |
+| + DR + SFT (ours)         | 59.85     | 21.14     | 23.54     | 8.54      | 38.59     | 30.33     |
+| + DR + DFT (ours)         | **70.40** | **34.85** | **36.12** | **14.58** | **54.22** | **42.03** |
+|                           |           |           |           |           |           |           |
+| **Llama-3.1-8B-Instruct** |           |           |           |           |           |           |
+| Base                      | 36.18     | 16.01     | 9.52      | 0.83      | 14.53     | 15.41     |
+| + SFT                     | 28.71     | 11.23     | 6.26      | 0.41      | 10.31     | 11.39     |
+| + DFT                     | 46.50     | 24.11     | 15.65     | 3.95      | 22.50     | 22.54     |
+| + DR + SFT (ours)         | 44.38     | 19.21     | 13.07     | 1.87      | 17.19     | 19.14     |
+| + DR + DFT (ours)         | **47.91** | **24.72** | **16.52** | **4.99**  | **26.09** | **24.05** |
+
+**Table**: Average accuracy (%) on mathematical reasoning benchmarks. SFT = Supervised Fine-tuning, DR = Data Rewriting, <br>
+DFT = Dynamic Fine-Tuning, from “On the Generalization of SFT: A Reinforcement Learning Perspective with Reward Rectification” [ (arXiv:2508.05629) ](https://arxiv.org/abs/2508.05629).
+
 ## Limitations
 While our experiments demonstrate the effectiveness of data rewriting for stabilizing off-policy supervised fine-tuning, several limitations remain. First, our evaluation is restricted to a limited set of models, primarily at moderate parameter scales, so assessing its applicability to larger and more diverse models is left for future work. Second, we focus exclusively on mathematical reasoning benchmarks; extending the approach to broader domains, including industrial settings such as healthcare and finance, is an important next step. Third, our method adopts a single-round offline rewriting strategy, whereas more sophisticated or online approaches—e.g., rewriting per batch to mitigate policy shifts during training—could further enhance stability and performance. Finally, exploring richer rewriting techniques, such as leveraging external knowledge from more advanced models, represents another promising direction.
 
